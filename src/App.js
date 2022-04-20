@@ -1,8 +1,8 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;s
+export default App;

@@ -39,11 +39,3 @@ const ItemListContainer= () => {
   
 export default ItemListContainer;
 
-//<ItemCount stock ={5} initial={1} onAdd= {onAdd} />
-
-//const [productosDeHigiene, setproductosDeHigiene] = useState ([]);
-//   async function pedirDatos() {
-//   let datosLlegando = await getData()
-//   setproductosDeHigiene(datosLlegando)
-// }
-// pedirDatos()

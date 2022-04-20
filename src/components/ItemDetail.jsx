@@ -1,8 +1,10 @@
 import ItemCount from "./ItemCount";
-import React from "react";
+import React, { useState, Link } from "react";
 import {CardGroup, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText} from 'reactstrap';
+import { Button } from "bootstrap";
 
 const ItemDetail = ({ item }) => {
+    const [itemCount, setItemCount] = useState(0);
 
     const onAdd = (qty) => {
         alert("You have selected" + qty + "items.")
@@ -31,9 +33,14 @@ const ItemDetail = ({ item }) => {
                         </CardText>
                         <CardText>
                             {item.stock} unidades en stock
-                        </CardText>
-                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                        </CardText>    
                     </CardBody>
+
+                    {
+                        itemCount === 0
+                        ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                        : <Events/>
+                    }
                 </Card>
             </CardGroup>
         </div>

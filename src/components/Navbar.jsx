@@ -1,5 +1,7 @@
-import CartWidget from './CartWidget'
+import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
+import SearchForm from './SearchForm';
+
 const NavBar = () => {
     return (
         <nav>
@@ -21,7 +23,9 @@ const NavBar = () => {
                 <li>
                    <span> <Link too='/category/18'> Combos </Link> </span> 
                 </li>
-                
+                <li>
+                    <SearchForm/>
+                </li>
                 <li>
                 <CartWidget></CartWidget>
                 </li>
