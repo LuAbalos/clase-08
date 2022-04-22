@@ -11,7 +11,7 @@ const ItemListContainer= () => {
 
   const [dato, setDato] = useState ([]);
   const { idCategory } = useParams ();
-    
+
   useEffect(() =>{
     if (idCategory == undefined){
       customFetch(2000, products)
@@ -23,11 +23,11 @@ const ItemListContainer= () => {
         .then((result) => setDato(result))
         .catch((err) => console.log(err)); 
     }
-    console.log(idCategory);   
+    
   }, [idCategory])
-
-  function onAdd (c) {
-    alert(`se agregó ${c} productos`)
+  
+  function onAdd (qty) {
+    alert(`se agregó ${qty} productos`)
   }
 
   return (
